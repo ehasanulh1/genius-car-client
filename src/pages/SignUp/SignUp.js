@@ -3,16 +3,16 @@ import { Link } from 'react-router-dom';
 import img from '../../assets/images/login/login.svg';
 import { FaFacebookF, FaGoogle, FaLinkedinIn } from "react-icons/fa";
 import { AuthContext } from '../../contexts/UserContext';
-import { GithubAuthProvider, GoogleAuthProvider, TwitterAuthProvider } from 'firebase/auth';
+import { GoogleAuthProvider } from 'firebase/auth';
 
 
 const SignUp = () => {
 
-    const { providerLogin } = useContext(AuthContext);
+    const { providerLogin, createUser } = useContext(AuthContext);
 
     const googleProvider = new GoogleAuthProvider();
-    const twitterProvider = new TwitterAuthProvider();
-    const githubProvider = new GithubAuthProvider();
+    // const twitterProvider = new TwitterAuthProvider();
+    // const githubProvider = new GithubAuthProvider();
 
     const handleSubmit = event => {
         event.preventDefault();
@@ -20,6 +20,13 @@ const SignUp = () => {
         const email = form.email.value;
         const password = form.password.value;
         console.log(email, password)
+
+        createUser(email, password)
+            .then(result => {
+                const user = result.user;
+                console.log(user)
+                form.reset();
+            })
     }
 
     const handleGoogleSignIn = () => {
@@ -66,7 +73,7 @@ const SignUp = () => {
                             </label>
                         </div>
                         <div className="form-control mt-6">
-                            <input className="btn btn-primary" type="submit" value="Login" />
+                            <input className="btn btn-primary" type="submit" value="Sign Up" />
                         </div>
                     </form>
                     <div className='text-center mb-6'>

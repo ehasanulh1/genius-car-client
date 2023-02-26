@@ -3,16 +3,16 @@ import { Link } from 'react-router-dom';
 import img from '../../assets/images/login/login.svg';
 import { FaFacebookF, FaGoogle, FaLinkedinIn } from "react-icons/fa";
 import { AuthContext } from '../../contexts/UserContext';
-import { GithubAuthProvider, GoogleAuthProvider, TwitterAuthProvider } from 'firebase/auth';
+import { GoogleAuthProvider } from 'firebase/auth';
 
 
 const Login = () => {
 
-    const { providerLogin } = useContext(AuthContext);
+    const { providerLogin, signIn } = useContext(AuthContext);
 
     const googleProvider = new GoogleAuthProvider();
-    const twitterProvider = new TwitterAuthProvider();
-    const githubProvider = new GithubAuthProvider();
+    // const twitterProvider = new TwitterAuthProvider();
+    // const githubProvider = new GithubAuthProvider();
 
     const handleSubmit = event => {
         event.preventDefault();
@@ -20,6 +20,16 @@ const Login = () => {
         const email = form.email.value;
         const password = form.password.value;
         console.log(email, password)
+
+        signIn(email, password)
+            .then(result => {
+                const user = result.user;
+                console.log(user)
+                form.reset();
+            })
+            .catch(error => {
+                console.error(error)
+            })
     }
 
     const handleGoogleSignIn = () => {
