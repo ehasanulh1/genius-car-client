@@ -1,0 +1,50 @@
+[
+    {
+        "_id": "63fb8f9b654788ec66a6ca85",
+        "service_id": 0,
+        "img": "https://i.ibb.co/B31s6WR/1.png",
+        "title": "Jillian Bradley",
+        "price": 38,
+        "rating": 5
+    },
+    {
+        "_id": "63fb8f9b055c25a16d81de8c",
+        "service_id": 1,
+        "img": "https://i.ibb.co/8jZK5sz/2.png",
+        "title": "Knight Melton",
+        "price": 26,
+        "rating": 5
+    },
+    {
+        "_id": "63fb8f9b517495fb92a4c53b",
+        "service_id": 3,
+        "img": "https://i.ibb.co/b2j38XV/3.png",
+        "title": "Hayes George",
+        "price": 24,
+        "rating": 4
+    },
+    {
+        "_id": "63fb8f9b9fd638e77e553000",
+        "service_id": 4,
+        "img": "https://i.ibb.co/hZNPCtp/4.png",
+        "title": "Shanna Osborn",
+        "price": 20,
+        "rating": 4
+    },
+    {
+        "_id": "63fb8f9b44698d482df453f6",
+        "service_id": 5,
+        "img": "https://i.ibb.co/B26KJhc/5.png",
+        "title": "Chase Goodwin",
+        "price": 29,
+        "rating": 5
+    },
+    {
+        "_id": "63fb8f9bc031657a7cd22324",
+        "service_id": 6,
+        "img": "https://i.ibb.co/MG571wb/6.png",
+        "title": "Houston Fry",
+        "price": 33,
+        "rating": 5
+    }
+]

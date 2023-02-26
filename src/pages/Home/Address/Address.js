@@ -5,7 +5,7 @@ import img3 from '../../../assets/icons/a3.svg';
 
 const Address = () => {
     return (
-        <div className='grid gap-6 grid-cols-1 lg:grid-cols-3 py-10 lg:p-24 mx-3 lg:mx-0 my-10 rounded-xl bg-black'>
+        <div className='grid gap-6 grid-cols-1 lg:grid-cols-3 py-10 lg:p-24 mx-3 lg:mx-0 mb-24 rounded-xl bg-base-content'>
             <div className='flex justify-center items-center my-5'>
                 <div className='pr-5'>
                     <img src={img1} alt="" />
