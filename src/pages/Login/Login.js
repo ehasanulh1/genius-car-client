@@ -35,10 +35,10 @@ const Login = () => {
     }
 
     return (
-        <div style={{ minHeight: '700px' }} className="hero">
+        <div style={{ minHeight: '700px' }} className="hero mb-20">
             <div className="hero-content grid gap-10 md:grid-cols-2 flex-col lg:flex-row">
                 <div className="text-center lg:text-left">
-                    <img src={img} alt="" className="lg:w-3/4 m-5" />
+                    <img src={img} alt="" className="md:w-3/4 m-5" />
                 </div>
                 <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                     <form onSubmit={handleSubmit} className="card-body">
@@ -63,12 +63,13 @@ const Login = () => {
                         </div>
                     </form>
                     <div className='text-center mb-6'>
-                        <p className='text-orange-600 py-3'>Or Sign In with</p>
-                        <div className='flex justify-center my-6'>
+                        <p className='text-sm text-orange-600 py-1'>Or Sign In with</p>
+                        <div className='flex justify-center my-4'>
                             <button className='p-3 rounded-full border  hover:bg-primary hover:text-white'><FaFacebookF /></button>
                             <button className='p-3 mx-3 rounded-full border hover:bg-primary hover:text-white'><FaLinkedinIn /></button>
                             <button onClick={handleGoogleSignIn} className='p-3 rounded-full border hover:bg-primary hover:text-white'><FaGoogle /></button>
                         </div>
+                        <p className='text-sm py-4'>Don't have an account? <Link className='underline text-primary' to='/register'>Register</Link></p>
                     </div>
                 </div>
             </div>
