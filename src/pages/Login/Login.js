@@ -1,14 +1,39 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import img from '../../assets/images/login/login.svg';
 import { FaFacebookF, FaGoogle, FaLinkedinIn } from "react-icons/fa";
+import { AuthContext } from '../../contexts/UserContext';
+import { GithubAuthProvider, GoogleAuthProvider, TwitterAuthProvider } from 'firebase/auth';
 
 
 const Login = () => {
 
+    const { providerLogin } = useContext(AuthContext);
+
+    const googleProvider = new GoogleAuthProvider();
+    const twitterProvider = new TwitterAuthProvider();
+    const githubProvider = new GithubAuthProvider();
+
     const handleSubmit = event => {
         event.preventDefault();
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
+        console.log(email, password)
     }
+
+    const handleGoogleSignIn = () => {
+        providerLogin(googleProvider)
+            .then(result => {
+                const user = result.user;
+                console.log(user)
+            })
+            .catch(error => {
+                console.error(error)
+
+            })
+    }
+
     return (
         <div style={{ minHeight: '700px' }} className="hero">
             <div className="hero-content grid gap-10 md:grid-cols-2 flex-col lg:flex-row">
@@ -22,7 +47,7 @@ const Login = () => {
                             <label className="label">
                                 <span className="label-text">Email</span>
                             </label>
-                            <input type="text" name='name' placeholder="email" className="input input-bordered" required />
+                            <input type="email" name='email' placeholder="email" className="input input-bordered" required />
                         </div>
                         <div className="form-control">
                             <label className="label">
@@ -36,24 +61,15 @@ const Login = () => {
                         <div className="form-control mt-6">
                             <input className="btn btn-primary" type="submit" value="Login" />
                         </div>
-                        <div className='text-center my-5'>
-                            <p className='text-orange-600'>Or Sign In with</p>
-                            <div className='flex justify-center my-5'>
-                                <div className='p-3 rounded-full border'>
-
-                                    <FaFacebookF />
-                                </div>
-                                <div className='p-3 mx-3 rounded-full border'>
-
-                                    <FaLinkedinIn />
-                                </div>
-                                <div className='p-3  rounded-full border'>
-
-                                    <FaGoogle />
-                                </div>
-                            </div>
-                        </div>
                     </form>
+                    <div className='text-center mb-6'>
+                        <p className='text-orange-600 py-3'>Or Sign In with</p>
+                        <div className='flex justify-center my-6'>
+                            <button className='p-3 rounded-full border  hover:bg-primary hover:text-white'><FaFacebookF /></button>
+                            <button className='p-3 mx-3 rounded-full border hover:bg-primary hover:text-white'><FaLinkedinIn /></button>
+                            <button onClick={handleGoogleSignIn} className='p-3 rounded-full border hover:bg-primary hover:text-white'><FaGoogle /></button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
