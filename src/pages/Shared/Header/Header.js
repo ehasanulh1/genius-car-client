@@ -5,6 +5,7 @@ import logo from '../../../assets/logo.svg';
 const Header = () => {
     const menuItems = <>
         <li><Link to="/">Home</Link></li>
+        <li><Link to="/login">Login</Link></li>
     </>
     return (
         <div className="navbar h-20 mb-12 bg-base-100">
@@ -27,7 +28,7 @@ const Header = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <Link to=""><button className="btn btn-outline btn-warning">Appointment</button></Link>
+                <Link to=""><button className="btn btn-outline btn-primary">Appointment</button></Link>
             </div>
         </div>
     );
