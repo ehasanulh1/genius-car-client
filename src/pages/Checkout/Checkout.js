@@ -17,7 +17,7 @@ const Checkout = () => {
         const message = form.message.value;
         // for send to server side
         const order = {
-            service: _id,
+            service_id: _id,
             serviceName: title,
             price,
             customer: name,
@@ -57,8 +57,8 @@ const Checkout = () => {
                 <div className='checkout-img'>
                     <img className='w-full rounded-xl' src={image1} alt="" />
                 </div>
-                <div className='absolute transform -translate-y-1/2 left-1/3 lg:left-24 top-1/2'>
-                    <h1 className='text-2xl lg:text-5xl font-bold text-white'>Check Out</h1>
+                <div className='absolute transform -translate-y-1/2 left-1/4 lg:left-24 top-1/2'>
+                    <h1 className='text-3xl md:text-5xl font-bold text-white'>Check Out</h1>
                 </div>
             </div>
 

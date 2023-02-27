@@ -1,10 +1,21 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { FaUserCircle } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import logo from '../../../assets/logo.svg';
+import { AuthContext } from '../../../contexts/UserContext';
 
 const Header = () => {
+    const { user, logOut } = useContext(AuthContext);
+
+    const handleLogOut = () => {
+        logOut()
+            .then(() => { })
+            .catch(e => console.error(e))
+    }
+
     const menuItems = <>
         <li><Link to="/">Home</Link></li>
+        <li><Link to="/orders">Orders</Link></li>
         <li><Link to="/login">Login</Link></li>
     </>
     return (
@@ -28,8 +39,31 @@ const Header = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <Link to=""><button className="btn btn-outline btn-primary">Appointment</button></Link>
+                <Link to=""><button className="btn btn-outline btn-primary mr-3">Appointment</button></Link>
+                <div className="flex items-center">
+                    {
+                        user?.uid ?
+                            <div className='flex items-center'>
+                                <span className='mr-3 font-semibold'>{user?.displayName}</span>
+                                {
+                                    user?.photoURL ?
+                                        <Link to='/profile'>
+                                            <img className='w-full' style={{ height: '40px', width: '40px' }} src={user?.photoURL} alt="" />
+                                        </Link>
+                                        :
+                                        <FaUserCircle className='text-4xl text-primary' />
+                                }
+                                <button onClick={handleLogOut} className='ml-3 btn btn-primary'>Log out</button>
+                            </div>
+                            :
+                            <>
+                                <Link className='mr-3' to='/login'><button className='btn btn-outline btn-primary'>Login</button></Link>
+                                <Link to='/register'><button className='btn btn-outline btn-primary'>Register</button></Link>
+                            </>
+                    }
+                </div>
             </div>
+
         </div>
     );
 };
