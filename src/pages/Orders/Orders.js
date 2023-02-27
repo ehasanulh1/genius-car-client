@@ -5,9 +5,11 @@ import OrderRow from './OrderRow';
 
 const Orders = () => {
     const { user } = useContext(AuthContext);
-    const [orders, setOrders] = useState({});
+    const [orders, setOrders] = useState([]);
+    console.log(orders)
 
     useEffect(() => {
+
         fetch(`http://localhost:5000/orders?email=${user?.email}`)
             .then(res => res.json())
             .then(data => setOrders(data))
@@ -27,14 +29,9 @@ const Orders = () => {
             <div className='flex justify-center rounded-xl my-10 lg:my-24'>
                 <div className="overflow-x-auto w-full">
                     <table className="table w-full">
-                        {/* head */}
                         <thead>
                             <tr>
-                                <th>
-                                    <label>
-                                        <input type="checkbox" className="checkbox" />
-                                    </label>
-                                </th>
+                                <th>Remove</th>
                                 <th>Name</th>
                                 <th>Job</th>
                                 <th>Favorite Color</th>
@@ -42,7 +39,6 @@ const Orders = () => {
                             </tr>
                         </thead>
                         <tbody>
-                            {/* row 1 */}
                             {
                                 orders.map(order => <OrderRow
                                     key={order._id}

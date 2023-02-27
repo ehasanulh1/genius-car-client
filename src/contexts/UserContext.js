@@ -11,18 +11,22 @@ const UserContext = ({ children }) => {
     const [loading, setLoading] = useState(false);
 
     const providerLogin = provider => {
+        setLoading(true);
         return signInWithPopup(auth, provider);
     }
 
     const createUser = (email, password) => {
+        setLoading(true);
         return createUserWithEmailAndPassword(auth, email, password);
     }
 
     const signIn = (email, password) => {
+        setLoading(true);
         return signInWithEmailAndPassword(auth, email, password);
     }
 
     const logOut = () => {
+        setLoading(true);
         return signOut(auth)
 
     }
@@ -31,6 +35,7 @@ const UserContext = ({ children }) => {
         const unsubscribe = onAuthStateChanged(auth, currentUser => {
             setUser(currentUser)
             console.log('Auth', currentUser)
+            setLoading(true);
         });
         return () => {
             unsubscribe();
@@ -40,6 +45,7 @@ const UserContext = ({ children }) => {
     const authInfo = {
         user,
         loading,
+        setLoading,
         providerLogin,
         createUser,
         signIn,
