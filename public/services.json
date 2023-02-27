@@ -1,70 +1,7 @@
 [
     {
-        "_id": "63faf15d9769a4dfed55482f",
-        "service_id": "01",
-        "img": "https://i.ibb.co/BqGdnHZ/1.jpg",
-        "price": "350.00",
-        "description": "Irure et ipsum ullamco laboris. Nulla sit dolore officia minim ut nostrud nostrud tempor. Id do Lorem occaecat laborum amet reprehenderit eiusmod deserunt. Laboris duis nisi duis ex deserunt Lorem exercitation deserunt officia aliqua nulla duis anim. Consectetur mollit duis dolor duis. Aliquip pariatur consequat adipisicing aute commodo commodo reprehenderit cillum. Nisi reprehenderit mollit incididunt occaecat occaecat sit laboris tempor magna sit aliquip est.\r\n",
-        "facility": [
-            {
-                "name": "Everett Palmer",
-                "details": "Veniam ullamco commodo minim anim id. Do reprehenderit officia sunt amet tempor ea. Deserunt aute officia Lorem nisi veniam. Nostrud laboris ut consectetur ad pariatur ut aute consectetur id.\r\n"
-            },
-            {
-                "name": "Ebony Cox",
-                "details": "Proident commodo dolore sunt aliqua. Nulla qui consectetur sint ad ex incididunt quis adipisicing sit ipsum occaecat. Occaecat veniam ad esse minim pariatur aute ad incididunt incididunt. In sint non adipisicing consequat sunt pariatur cupidatat non proident consectetur eu commodo ex. Dolor irure consequat ipsum veniam eu velit ipsum. Labore exercitation sint sit voluptate ex nulla. Ea non adipisicing eiusmod commodo do eiusmod ea qui consequat dolor laborum nisi fugiat.\r\n"
-            },
-            {
-                "name": "Kramer Parker",
-                "details": "Quis laborum anim do mollit occaecat proident non exercitation eiusmod ullamco amet. Anim esse commodo incididunt enim incididunt labore esse aute magna reprehenderit ex ut eiusmod deserunt. Aliqua anim pariatur velit et consectetur laboris esse proident pariatur esse. Ex velit dolor fugiat Lorem sint elit sint aute. Non veniam aliqua est proident id est ea velit cillum in. Labore proident aliqua irure reprehenderit in est quis ea nostrud occaecat ipsum. Sit deserunt non ut eiusmod fugiat incididunt consectetur non eiusmod do aliquip consectetur.\r\n"
-            }
-        ]
-    },
-    {
-        "_id": "63faf15de32a7525a0290c0e",
-        "service_id": "02",
-        "img": "https://i.ibb.co/wLMGQD7/2.jpg",
-        "price": "390.00",
-        "description": "Nostrud magna minim dolor elit amet ea adipisicing. Ea aliquip dolor eu eiusmod amet pariatur. Sunt aliqua do commodo pariatur. Velit culpa minim eiusmod velit est.\r\n",
-        "facility": [
-            {
-                "name": "Lenore Hartman",
-                "details": "Aliquip reprehenderit adipisicing id duis laborum sit nulla aliqua consequat anim. Ex quis mollit enim ex cillum ipsum qui aliquip ea do qui exercitation ea reprehenderit. Aute non sint anim labore. Incididunt aliqua ea laboris duis. Dolor aliquip amet nostrud incididunt deserunt elit officia ex veniam eiusmod ut enim aliquip. Non occaecat excepteur eiusmod tempor sint consequat anim enim ad. Cillum culpa sint adipisicing qui veniam esse eiusmod occaecat.\r\n"
-            },
-            {
-                "name": "Cathryn Davenport",
-                "details": "Qui id ea dolore ad quis. Id do laboris officia in voluptate exercitation magna proident velit Lorem amet et culpa nisi. In quis cupidatat nisi reprehenderit minim dolor. Consectetur duis qui aliqua velit duis est laborum consectetur. Anim cillum aliquip eu esse in dolor ex proident ex duis occaecat duis. Quis sint cupidatat Lorem ad pariatur aliquip ullamco qui elit aute qui cupidatat.\r\n"
-            },
-            {
-                "name": "Mercer Grant",
-                "details": "Consequat ipsum cupidatat aute do. Enim occaecat labore consectetur nostrud duis consequat aliquip in amet laborum irure ipsum sunt culpa. Fugiat fugiat non eu duis et magna minim non consectetur aute et ut labore ea. Deserunt incididunt velit nulla est in culpa et nisi nostrud est magna.\r\n"
-            }
-        ]
-    },
-    {
-        "_id": "63faf15d6f6334c435541d6c",
-        "service_id": "03",
-        "img": "https://i.ibb.co/9spnS6Q/3.jpg",
-        "price": "370.00",
-        "description": "Ex ullamco in eu veniam ullamco. Eiusmod id fugiat sint incididunt ullamco exercitation. Sit aliquip consequat sunt adipisicing consectetur commodo qui duis tempor. Sint occaecat nostrud do quis ea ullamco ullamco incididunt sint nostrud Lorem ea. Sit aute ad eu nostrud fugiat aute. Non aliquip amet ex ut quis ex cupidatat dolor sunt occaecat ullamco deserunt incididunt.\r\n",
-        "facility": [
-            {
-                "name": "Elena Dickson",
-                "details": "Ullamco occaecat anim minim officia mollit do dolor qui eu dolor exercitation nulla officia quis. Nisi velit eiusmod pariatur eiusmod voluptate sint. Reprehenderit eu officia nostrud do dolore excepteur. Lorem non eiusmod irure consequat ipsum quis sint pariatur in aliqua officia laboris sit.\r\n"
-            },
-            {
-                "name": "Aguirre Miller",
-                "details": "Aliqua dolore labore qui occaecat enim aute velit labore consectetur culpa. Deserunt ipsum laborum cupidatat id et nisi aute. Incididunt nostrud sit adipisicing do laboris qui fugiat aliqua sit sint culpa.\r\n"
-            },
-            {
-                "name": "Ingram Decker",
-                "details": "In proident enim incididunt do tempor consectetur id dolor voluptate aliqua do quis nostrud veniam. Non amet et aute voluptate sint proident aliqua minim aliqua anim aute. Et laboris enim adipisicing voluptate adipisicing qui quis id dolore laborum dolor sit. Excepteur officia magna occaecat do ex dolor laboris ex voluptate laboris reprehenderit. Officia nulla duis nulla nostrud pariatur ad incididunt ad.\r\n"
-            }
-        ]
-    },
-    {
-        "_id": "63faf15deea36d950ddaad23",
         "service_id": "04",
+        "title": "Battery Charge",
         "img": "https://i.ibb.co/QkhK6b2/4.jpg",
         "price": "220.00",
         "description": "Sint veniam cupidatat eu nulla nisi ut voluptate cillum eu voluptate in. Nisi ex velit ut laborum consequat minim. Id aliquip elit dolor quis.\r\n",
@@ -84,8 +21,29 @@
         ]
     },
     {
-        "_id": "63faf15d804af85e7acbcaca",
+        "service_id": "01",
+        "title": "Engine Oil Change",
+        "img": "https://i.ibb.co/BqGdnHZ/1.jpg",
+        "price": "350.00",
+        "description": "Irure et ipsum ullamco laboris. Nulla sit dolore officia minim ut nostrud nostrud tempor. Id do Lorem occaecat laborum amet reprehenderit eiusmod deserunt. Laboris duis nisi duis ex deserunt Lorem exercitation deserunt officia aliqua nulla duis anim. Consectetur mollit duis dolor duis. Aliquip pariatur consequat adipisicing aute commodo commodo reprehenderit cillum. Nisi reprehenderit mollit incididunt occaecat occaecat sit laboris tempor magna sit aliquip est.\r\n",
+        "facility": [
+            {
+                "name": "Everett Palmer",
+                "details": "Veniam ullamco commodo minim anim id. Do reprehenderit officia sunt amet tempor ea. Deserunt aute officia Lorem nisi veniam. Nostrud laboris ut consectetur ad pariatur ut aute consectetur id.\r\n"
+            },
+            {
+                "name": "Ebony Cox",
+                "details": "Proident commodo dolore sunt aliqua. Nulla qui consectetur sint ad ex incididunt quis adipisicing sit ipsum occaecat. Occaecat veniam ad esse minim pariatur aute ad incididunt incididunt. In sint non adipisicing consequat sunt pariatur cupidatat non proident consectetur eu commodo ex. Dolor irure consequat ipsum veniam eu velit ipsum. Labore exercitation sint sit voluptate ex nulla. Ea non adipisicing eiusmod commodo do eiusmod ea qui consequat dolor laborum nisi fugiat.\r\n"
+            },
+            {
+                "name": "Kramer Parker",
+                "details": "Quis laborum anim do mollit occaecat proident non exercitation eiusmod ullamco amet. Anim esse commodo incididunt enim incididunt labore esse aute magna reprehenderit ex ut eiusmod deserunt. Aliqua anim pariatur velit et consectetur laboris esse proident pariatur esse. Ex velit dolor fugiat Lorem sint elit sint aute. Non veniam aliqua est proident id est ea velit cillum in. Labore proident aliqua irure reprehenderit in est quis ea nostrud occaecat ipsum. Sit deserunt non ut eiusmod fugiat incididunt consectetur non eiusmod do aliquip consectetur.\r\n"
+            }
+        ]
+    },
+    {
         "service_id": "05",
+        "title": "Electrical System",
         "img": "https://i.ibb.co/jTL97Fk/5.jpg",
         "price": "270.00",
         "description": "Labore cillum magna do incididunt ad commodo irure tempor ad eu. Non elit nisi duis minim. Fugiat nostrud irure et laborum sunt mollit. Ut sunt commodo ea tempor sunt esse cupidatat esse. Deserunt reprehenderit consequat in laborum esse do ipsum id voluptate. Ex do officia laborum incididunt excepteur quis. Voluptate duis occaecat adipisicing amet sit tempor adipisicing.\r\n",
@@ -105,8 +63,50 @@
         ]
     },
     {
-        "_id": "63faf15d8702985a42c5275f",
+        "service_id": "03",
+        "title": "Full Car Repair",
+        "img": "https://i.ibb.co/9spnS6Q/3.jpg",
+        "price": "370.00",
+        "description": "Ex ullamco in eu veniam ullamco. Eiusmod id fugiat sint incididunt ullamco exercitation. Sit aliquip consequat sunt adipisicing consectetur commodo qui duis tempor. Sint occaecat nostrud do quis ea ullamco ullamco incididunt sint nostrud Lorem ea. Sit aute ad eu nostrud fugiat aute. Non aliquip amet ex ut quis ex cupidatat dolor sunt occaecat ullamco deserunt incididunt.\r\n",
+        "facility": [
+            {
+                "name": "Elena Dickson",
+                "details": "Ullamco occaecat anim minim officia mollit do dolor qui eu dolor exercitation nulla officia quis. Nisi velit eiusmod pariatur eiusmod voluptate sint. Reprehenderit eu officia nostrud do dolore excepteur. Lorem non eiusmod irure consequat ipsum quis sint pariatur in aliqua officia laboris sit.\r\n"
+            },
+            {
+                "name": "Aguirre Miller",
+                "details": "Aliqua dolore labore qui occaecat enim aute velit labore consectetur culpa. Deserunt ipsum laborum cupidatat id et nisi aute. Incididunt nostrud sit adipisicing do laboris qui fugiat aliqua sit sint culpa.\r\n"
+            },
+            {
+                "name": "Ingram Decker",
+                "details": "In proident enim incididunt do tempor consectetur id dolor voluptate aliqua do quis nostrud veniam. Non amet et aute voluptate sint proident aliqua minim aliqua anim aute. Et laboris enim adipisicing voluptate adipisicing qui quis id dolore laborum dolor sit. Excepteur officia magna occaecat do ex dolor laboris ex voluptate laboris reprehenderit. Officia nulla duis nulla nostrud pariatur ad incididunt ad.\r\n"
+            }
+        ]
+    },
+    {
+        "service_id": "02",
+        "title": "Engine Repair",
+        "img": "https://i.ibb.co/wLMGQD7/2.jpg",
+        "price": "390.00",
+        "description": "Nostrud magna minim dolor elit amet ea adipisicing. Ea aliquip dolor eu eiusmod amet pariatur. Sunt aliqua do commodo pariatur. Velit culpa minim eiusmod velit est.\r\n",
+        "facility": [
+            {
+                "name": "Lenore Hartman",
+                "details": "Aliquip reprehenderit adipisicing id duis laborum sit nulla aliqua consequat anim. Ex quis mollit enim ex cillum ipsum qui aliquip ea do qui exercitation ea reprehenderit. Aute non sint anim labore. Incididunt aliqua ea laboris duis. Dolor aliquip amet nostrud incididunt deserunt elit officia ex veniam eiusmod ut enim aliquip. Non occaecat excepteur eiusmod tempor sint consequat anim enim ad. Cillum culpa sint adipisicing qui veniam esse eiusmod occaecat.\r\n"
+            },
+            {
+                "name": "Cathryn Davenport",
+                "details": "Qui id ea dolore ad quis. Id do laboris officia in voluptate exercitation magna proident velit Lorem amet et culpa nisi. In quis cupidatat nisi reprehenderit minim dolor. Consectetur duis qui aliqua velit duis est laborum consectetur. Anim cillum aliquip eu esse in dolor ex proident ex duis occaecat duis. Quis sint cupidatat Lorem ad pariatur aliquip ullamco qui elit aute qui cupidatat.\r\n"
+            },
+            {
+                "name": "Mercer Grant",
+                "details": "Consequat ipsum cupidatat aute do. Enim occaecat labore consectetur nostrud duis consequat aliquip in amet laborum irure ipsum sunt culpa. Fugiat fugiat non eu duis et magna minim non consectetur aute et ut labore ea. Deserunt incididunt velit nulla est in culpa et nisi nostrud est magna.\r\n"
+            }
+        ]
+    },
+    {
         "service_id": "06",
+        "title": "Automatic Services",
         "img": "https://i.ibb.co/wYp9WWg/6.jpg",
         "price": "280.00",
         "description": "Aute eu aliqua sint exercitation irure aliqua nisi magna id. Sunt amet elit ut et exercitation commodo. Incididunt dolore cupidatat eu tempor reprehenderit Lorem eu anim nostrud dolor. Eiusmod consectetur fugiat ea enim occaecat proident est in culpa occaecat.\r\n",
