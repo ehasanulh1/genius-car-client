@@ -6,7 +6,7 @@ import OrderRow from './OrderRow';
 const Orders = () => {
     const { user } = useContext(AuthContext);
     const [orders, setOrders] = useState([]);
-    console.log(orders)
+
 
     useEffect(() => {
 
@@ -16,7 +16,7 @@ const Orders = () => {
     }, [user?.email])
 
     return (
-        <div className='mx-2 lg:mx-0'>
+        <div style={{ minHeight: '700px' }} className='mx-2 lg:mx-0'>
             <div className='relative'>
                 <div className='checkout-img'>
                     <img className='w-full rounded-xl' src={image1} alt="" />
@@ -33,9 +33,9 @@ const Orders = () => {
                             <tr>
                                 <th>Remove</th>
                                 <th>Name</th>
-                                <th>Job</th>
-                                <th>Favorite Color</th>
-                                <th></th>
+                                <th>Email</th>
+                                <th>Date</th>
+                                <th>Status</th>
                             </tr>
                         </thead>
                         <tbody>

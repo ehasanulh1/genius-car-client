@@ -1,9 +1,23 @@
 import React, { useEffect, useState } from 'react';
-import { RiDeleteBinFill } from 'react-icons/ri';
+import { MdDelete } from 'react-icons/md';
 
 const OrderRow = ({ order }) => {
     const [orderService, setOrderService] = useState([])
-    const { service_id, serviceName, email, phone } = order;
+    const { _id, service_id, serviceName, email, date, phone } = order;
+
+    const handleDelete = id => {
+        const agree = window.confirm(`Are you sure! you want to delete:${serviceName}`)
+        if (agree) {
+            console.log('delete order', id)
+            fetch(`http://localhost:3000/orders/${_id}`, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data)
+                })
+        }
+    }
 
     useEffect(() => {
         fetch(`http://localhost:5000/services/${service_id}`)
@@ -15,7 +29,7 @@ const OrderRow = ({ order }) => {
         <tr>
             <th>
                 <label>
-                    <button className="btn text-2xl btn-circle"><RiDeleteBinFill /></button>
+                    <button onClick={() => handleDelete(_id)} className="btn btn-circle btn-outline text-2xl"><MdDelete /></button>
                 </label>
             </th>
             <td>
@@ -34,9 +48,9 @@ const OrderRow = ({ order }) => {
                 </div>
             </td>
             <td>
-                <span className="badge badge-ghost badge-sm">Desktop Support Technician</span>
+                <span>{email}</span>
             </td>
-            <td>Purple</td>
+            <td>{date}</td>
             <th>
                 <button className="btn btn-ghost btn-xs">details</button>
             </th>

@@ -15,12 +15,18 @@ const Checkout = () => {
         const email = user?.email || 'unregistered';
         const phone = form.phone.value;
         const message = form.message.value;
+
+        // for set today date
+        let today = new Date();
+        const date = String(today.getDate()).padStart(2, '0') + '-' + String(today.getMonth() + 1).padStart(2, '0') + '-' + today.getFullYear();
+
         // for send to server side
         const order = {
             service_id: _id,
             serviceName: title,
             price,
             customer: name,
+            date,
             email,
             phone,
             message
