@@ -65,6 +65,7 @@ const Checkout = () => {
                 </div>
                 <div className='absolute transform -translate-y-1/2 left-1/4 lg:left-24 top-1/2'>
                     <h1 className='text-3xl md:text-5xl font-bold text-white'>Check Out</h1>
+                    <p className='text-white font-medium'>{title}</p>
                 </div>
             </div>
 

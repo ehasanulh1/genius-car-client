@@ -8,7 +8,7 @@ const auth = getAuth(app)
 
 const UserContext = ({ children }) => {
     const [user, setUser] = useState(null);
-    const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(true);
 
     const providerLogin = provider => {
         setLoading(true);

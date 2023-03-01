@@ -1,5 +1,8 @@
 import React, { useContext } from 'react';
-import { FaUserCircle } from 'react-icons/fa';
+import { FaRegHeart, FaUserCircle } from 'react-icons/fa';
+import { HiOutlineLogin, HiOutlineLogout, HiOutlineShoppingBag, HiOutlineUserAdd } from 'react-icons/hi';
+import { BiUser } from 'react-icons/bi';
+import { GoSearch } from 'react-icons/go';
 import { Link } from 'react-router-dom';
 import logo from '../../../assets/logo.svg';
 import { AuthContext } from '../../../contexts/UserContext';
@@ -14,9 +17,11 @@ const Header = () => {
     }
 
     const menuItems = <>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/orders">Orders</Link></li>
-        <li><Link to="/login">Login</Link></li>
+        <li><Link to="/" className='text-lg'>Home</Link></li>
+        <li><Link to="/" className='text-lg'>About</Link></li>
+        <li><Link to="/" className='text-lg'>Services</Link></li>
+        <li><Link to="/" className='text-lg'>Blog</Link></li>
+        <li><Link to="/" className='text-lg'>Contact</Link></li>
     </>
     return (
         <div className="navbar h-20 mb-12 bg-base-100">
@@ -39,26 +44,26 @@ const Header = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <Link to=""><button className="btn btn-outline btn-primary mr-3">Appointment</button></Link>
+
+                <Link to='/' className='text-3xl mr-4' ><GoSearch /></Link>
+                <Link to='/' className='text-3xl mr-4'><FaRegHeart /></Link>
+
+
                 <div className="flex items-center">
                     {
                         user?.uid ?
-                            <div className='flex items-center'>
-                                <span className='mr-3 font-semibold'>{user?.displayName}</span>
-                                {
-                                    user?.photoURL ?
-                                        <Link to='/profile'>
-                                            <img className='w-full' style={{ height: '40px', width: '40px' }} src={user?.photoURL} alt="" />
-                                        </Link>
-                                        :
-                                        <FaUserCircle className='text-4xl text-primary' />
-                                }
-                                <button onClick={handleLogOut} className='ml-3 btn btn-primary'>Log out</button>
+                            <div className='flex items-center justify-center'>
+
+                                <Link to='/' className='text-3xl mr-4'><HiOutlineShoppingBag /></Link>
+                                <Link to='/' className='text-3xl mr-4'><BiUser /></Link>
+                                <Link onClick={handleLogOut} to='/' className='text-3xl'><HiOutlineLogout /></Link>
                             </div>
                             :
                             <>
-                                <Link className='mr-3' to='/login'><button className='btn btn-outline btn-primary'>Login</button></Link>
-                                <Link to='/register'><button className='btn btn-outline btn-primary'>Register</button></Link>
+                                <Link to='/register' className='text-3xl mr-4'><HiOutlineUserAdd /></Link>
+                                <Link to='/login' className='text-3xl mr-4'><HiOutlineLogin /></Link>
+                                <Link to=""><button className="btn btn-outline btn-primary">Appointment</button></Link>
+
                             </>
                     }
                 </div>

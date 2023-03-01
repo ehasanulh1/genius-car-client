@@ -1,23 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { MdDelete } from 'react-icons/md';
 
-const OrderRow = ({ order }) => {
+const OrderRow = ({ order, handleDelete, handleStatusUpdate }) => {
     const [orderService, setOrderService] = useState([])
-    const { _id, service_id, serviceName, email, date, phone } = order;
-
-    const handleDelete = id => {
-        const agree = window.confirm(`Are you sure! you want to delete:${serviceName}`)
-        if (agree) {
-            console.log('delete order', id)
-            fetch(`http://localhost:3000/orders/${_id}`, {
-                method: 'DELETE'
-            })
-                .then(res => res.json())
-                .then(data => {
-                    console.log(data)
-                })
-        }
-    }
+    const { _id, service_id, serviceName, email, date, phone, status } = order;
 
     useEffect(() => {
         fetch(`http://localhost:5000/services/${service_id}`)
@@ -52,7 +38,9 @@ const OrderRow = ({ order }) => {
             </td>
             <td>{date}</td>
             <th>
-                <button className="btn btn-ghost btn-xs">details</button>
+                <button onClick={() => handleStatusUpdate(_id)}>{status ? <div className='badge badge-info font-normal'>Approved</div> : <div className='badge badge-error font-normal'>Pending</div>}</button>
+
+
             </th>
         </tr>
     );
