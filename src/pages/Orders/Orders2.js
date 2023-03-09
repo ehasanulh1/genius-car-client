@@ -4,7 +4,7 @@ import image1 from '../../assets/images/others/Rectangle 1548.png';
 import OrderRow from './OrderRow';
 
 const Orders2 = () => {
-    const { user } = useContext(AuthContext);
+    const { user, logOut } = useContext(AuthContext);
     const [orders, setOrders] = useState([]);
 
     const handleDelete = id => {
@@ -48,10 +48,19 @@ const Orders2 = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/orders?email=${user?.email}`)
-            .then(res => res.json())
+        fetch(`http://localhost:5000/orders?email=${user?.email}`, {
+            headers: {
+                authorization: `Bearer ${localStorage.getItem('geniusToken')}`
+            }
+        })
+            .then(res => {
+                if (res.status === 401 || res.status === 403) {
+                    return logOut()
+                }
+                return res.json()
+            })
             .then(data => setOrders(data))
-    }, [user?.email])
+    }, [user?.email, logOut])
 
     return (
         <div className='mx-2 lg:mx-0'>

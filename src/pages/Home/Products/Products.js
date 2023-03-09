@@ -10,7 +10,7 @@ const Products = () => {
     }, [])
 
     return (
-        <div className='my-12'>
+        <div id='products' className='my-12'>
             <div className='text-center mb-12'>
                 <p className='text-2xl font-bold text-orange-600 mb-5'>Popular Products</p>
                 <h1 className="text-5xl font-bold mb-5">Browse Our Products</h1>

@@ -18,8 +18,9 @@ const Header = () => {
 
     const menuItems = <>
         <li><Link to="/" className='text-lg'>Home</Link></li>
-        <li><Link to="/" className='text-lg'>About</Link></li>
-        <li><Link to="/" className='text-lg'>Services</Link></li>
+        <li><a href='#about' className='text-lg'>About</a></li>
+        <li><a href='#services' className='text-lg'>Services</a></li>
+        <li><a href="#products" className='text-lg'>Products</a></li>
         <li><Link to="/" className='text-lg'>Blog</Link></li>
         <li><Link to="/" className='text-lg'>Contact</Link></li>
     </>
@@ -54,7 +55,7 @@ const Header = () => {
                         user?.uid ?
                             <div className='flex items-center justify-center'>
 
-                                <Link to='/' className='text-3xl mr-4'><HiOutlineShoppingBag /></Link>
+                                <Link to='/orders' className='text-3xl mr-4'><HiOutlineShoppingBag /></Link>
                                 <Link to='/' className='text-3xl mr-4'><BiUser /></Link>
                                 <Link onClick={handleLogOut} to='/' className='text-3xl'><HiOutlineLogout /></Link>
                             </div>
