@@ -4,6 +4,7 @@ import img from '../../assets/images/login/login.svg';
 import { FaFacebookF, FaGoogle, FaLinkedinIn } from "react-icons/fa";
 import { AuthContext } from '../../contexts/UserContext';
 import { GoogleAuthProvider } from 'firebase/auth';
+import { setAuthToken } from '../../api/auth';
 
 
 const Login = () => {
@@ -26,27 +27,10 @@ const Login = () => {
         signIn(email, password)
             .then(result => {
                 const user = result.user;
-                console.log(user)
-                const currentUser = {
-                    email: user.email
-                }
-                console.log(currentUser)
-                //get jwt token
-                fetch('http://localhost:5000/jwt', {
-                    method: 'POST',
-                    headers: {
-                        'content-type': 'application/json'
-                    },
-                    body: JSON.stringify(currentUser)
-                })
-                    .then(res => res.json())
-                    .then(data => {
-                        console.log(data)
-                        //local storage is the easiest but not the best place to store token
-                        localStorage.setItem('geniusToken', data.token)
-                        form.reset();
-                        navigate(from, { replace: true });
-                    })
+                setAuthToken(user)
+                form.reset();
+                navigate(from, { replace: true });
+
             })
             .catch(error => {
                 console.error(error)
@@ -57,7 +41,7 @@ const Login = () => {
         providerLogin(googleProvider)
             .then(result => {
                 const user = result.user;
-                console.log(user)
+                setAuthToken(user)
                 navigate(from, { replace: true });
             })
             .catch(error => {

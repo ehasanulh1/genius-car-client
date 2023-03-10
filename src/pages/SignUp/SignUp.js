@@ -1,14 +1,16 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import img from '../../assets/images/login/login.svg';
 import { FaFacebookF, FaGoogle, FaLinkedinIn } from "react-icons/fa";
 import { AuthContext } from '../../contexts/UserContext';
 import { GoogleAuthProvider } from 'firebase/auth';
+import { setAuthToken } from '../../api/auth';
 
 
 const SignUp = () => {
 
     const { providerLogin, createUser } = useContext(AuthContext);
+    const navigate = useNavigate();
 
     const googleProvider = new GoogleAuthProvider();
     // const twitterProvider = new TwitterAuthProvider();
@@ -24,8 +26,9 @@ const SignUp = () => {
         createUser(email, password)
             .then(result => {
                 const user = result.user;
-                console.log(user)
+                setAuthToken(user)
                 form.reset();
+                navigate('/')
             })
     }
 
@@ -34,6 +37,8 @@ const SignUp = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user)
+                setAuthToken(user)
+                navigate('/')
             })
             .catch(error => {
                 console.error(error)

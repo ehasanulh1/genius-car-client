@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../contexts/UserContext';
 import image1 from '../../assets/images/checkout/checkout.png';
 import './Checkout.css'
@@ -7,6 +7,7 @@ import './Checkout.css'
 const Checkout = () => {
     const { _id, title, price } = useLoaderData();
     const { user } = useContext(AuthContext);
+    const navigate = useNavigate();
 
     const handleSubmit = event => {
         event.preventDefault();
@@ -52,6 +53,7 @@ const Checkout = () => {
                 if (data.acknowledged) {
                     alert('Order placed successfully')
                     form.reset();
+                    navigate('/orders')
                 }
             })
             .catch(err => console.error(err))
